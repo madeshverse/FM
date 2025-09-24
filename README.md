@@ -65,25 +65,64 @@ MODEL GRAPH:
 
 
 Program
+am=6.3;
+
+fm=484;
+
+ac=12.6;
+
+fc=4840;
+
+fs=48400;
+
+b=5.5;
+
+t=0:1/fs:3/fm;
+
+m=am*cos(2*3.14*fm*t);
+
+subplot(3,1,1);
+
+plot(t,m);
+
+title('Message signal');
+
+c=ac*cos(2*3.14*fc*t);
+
+subplot(3,1,2);
+
+plot(t,c);
+
+title('Carrier signal');
+
+efm= ac*cos((2*3.14*fc*t)+b*sin(2*3.14*fm*t));
+
+subplot(3,1,3);
+
+plot(t,efm);
+
+title('Frequency modulated signal');
 
 
 Output Waveform
 
+<img width="756" height="713" alt="image" src="https://github.com/user-attachments/assets/e09e821e-9fb8-4ce1-864d-d6e853242449" />
 
 
 Tabulation
 
+![WhatsApp Image 2025-09-24 at 18 18 01_e3224e3f](https://github.com/user-attachments/assets/3cb17397-0109-4c4a-852f-4f4fea750e2d)
 
 
 Calculation
 
 
 
-Frequency Deviation Practical = 
+Frequency Deviation Practical = 2712
 
-Modulation Index Practical	= 
+Modulation Index Practical	= 0.5
 
-Modulation Index Theoretical	=
+Modulation Index Theoretical	=0.5
 
 
 
